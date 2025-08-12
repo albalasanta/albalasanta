@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditt Navn - Installasjonskunst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        header {
+            background: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #666;
+        }
+        
+        main {
+            margin-top: 80px;
+            min-height: 100vh;
+        }
+        
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .projects {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        .project {
+            background: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-video {
+            width: 100%;
+            height: 250px;
+            background: #000;
+        }
+        
+        .project-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .project h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .project-year {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .about {
+            background: #f5f5f5;
+            padding: 4rem 2rem;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .about p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #666;
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin-left: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            main {
+                margin-top: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Ditt Navn</a>
+            <ul>
+                <li><a href="#prosjekter">Prosjekter</a></li>
+                <li><a href="#om">Om</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Installasjonskunst</h1>
+            <p>Utforskning av rom, lyd og bevegelse gjennom samtidskunst</p>
+        </section>
+
+        <section id="prosjekter" class="projects">
+            <h2 class="section-title">Prosjekter</h2>
+            
+            <div class="project-grid">
+                <div class="project">
+                    <div class="project-video">
+                        <!-- Bytt ut med din egen Vimeo/YouTube embed kode -->
+                        <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Prosjektnavn 1</h3>
+                        <div class="project-year">2024</div>
+                        <p>Beskrivelse av installasjonen din. Fortell om konseptet, materialene du brukte, og hva du ville uttrykke med verket.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-video">
+                        <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Prosjektnavn 2</h3>
+                        <div class="project-year">2023</div>
+                        <p>Beskrivelse av din andre installasjon. Forklar prosessen og tankene bak verket.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-video">
+                        <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                    </div>
+                    <div class="project-info">
+                        <h3>Prosjektnavn 3</h3>
+                        <div class="project-year">2023</div>
+                        <p>Din tredje installasjon. Beskriv hvordan publikum interagerer med verket og hvilke reaksjoner du har opplevd.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="om" class="about">
+            <div class="about-content">
+                <h2>Om Kunstneren</h2>
+                <p>Skriv din kunstnerbiografi her. Fortell om din bakgrunn, utdanning, og hva som driver deg som kunstner.</p>
+                <p>Beskriv din tilnærming til installasjonskunst og hvilke temaer du utforsker i arbeidet ditt.</p>
+                <p>Nevn eventuelle utstillinger, priser eller anerkjennelser du har mottatt.</p>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact">
+            <h2>Kontakt</h2>
+            <div class="contact-info">
+                <p><strong>E-post:</strong> <a href="mailto:din@epost.no">din@epost.no</a></p>
+                <p><strong>Telefon:</strong> +47 xxx xx xxx</p>
+                <p><strong>Sted:</strong> Trondheim, Norge</p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/dittbrukernavn" target="_blank">@dittbrukernavn</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ditt Navn. Alle rettigheter forbeholdt.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

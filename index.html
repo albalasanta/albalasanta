@@ -49,6 +49,14 @@
             margin-bottom: 2.5rem;
             letter-spacing: 0.3px;
             font-family: 'Inter', 'Calibri', sans-serif;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+        }
+        
+        .artist-name:hover {
+            color: #666;
         }
         
         nav ul {
@@ -132,6 +140,14 @@
             display: block;
         }
         
+        .project h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-family: 'Inter', 'Calibri', sans-serif;
+        }
+        
         .project-year {
             color: #888;
             font-size: 0.9rem;
@@ -151,6 +167,20 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+        
+        .project-image {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         .project-description {
@@ -245,7 +275,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h1 class="artist-name">Alba Lasanta Ebbesen</h1>
+            <a href="#" class="artist-name home-link">Alba Lasanta Ebbesen</a>
             
             <nav>
                 <ul>
@@ -257,8 +287,8 @@
                             <li><a href="#" data-project="project3">Where the creeks meet</a></li>
                             <li><a href="#" data-project="project4">Time for reflection</a></li>
                             <li><a href="#" data-project="project5">We'll see where it goes</a></li>
-                             <li><a href="#" data-project="project6">Prosjektnavn 3</a></li>
-                             <li><a href="#" data-project="project7">Prosjektnavn 3</a></li>
+                             <li><a href="#" data-project="project6">Prosjektnavn 6</a></li>
+                             <li><a href="#" data-project="project7">Prosjektnavn 7</a></li>
                         </ul>
                     </li>
                     <li><a href="#" data-section="about">Om</a></li>
@@ -282,10 +312,14 @@
             <div class="project" id="project1">
                 <h2>Just the two of us</h2>
                 <div class="project-year">2025</div>
+                <!-- Video eksempel -->
                 <div class="project-video">
-                    <https://vimeo.com/1106100022?share=copy#t=0>
                     <iframe src="https://player.vimeo.com/video/1106100022" allowfullscreen></iframe>
                 </div>
+                <!-- Eller bruk bilde i stedet -->
+                <!-- <div class="project-image">
+                    <img src="ditt-bilde.jpg" alt="Just the two of us">
+                </div> -->
                 <div class="project-description">
                     <p>Beskrivelse av installasjonen din. Fortell om konseptet, materialene du brukte, og hva du ville uttrykke med verket.</p>
                     <p>Du kan legge til flere avsnitt som beskriver prosessen, publikumsreaksjoner, eller tekniske detaljer.</p>
@@ -293,8 +327,8 @@
             </div>
 
             <div class="project" id="project2">
-                <h2>Prosjektnavn 2</h2>
-                <div class="project-year">2023</div>
+                <h2>She´s alive</h2>
+                <div class="project-year">2024</div>
                 <div class="project-video">
                     <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
                 </div>
@@ -304,13 +338,58 @@
             </div>
 
             <div class="project" id="project3">
-                <h2>Prosjektnavn 3</h2>
+                <h2>Where the creeks meet</h2>
+                <div class="project-year">2024</div>
+                <!-- Eksempel på bilde i stedet for video -->
+                <div class="project-image">
+                    <img src="where-creeks-meet.jpg" alt="Where the creeks meet">
+                </div>
+                <div class="project-description">
+                    <p>Beskrivelse av verket. Beskriv hvordan publikum interagerer med verket og hvilke reaksjoner du har opplevd.</p>
+                </div>
+            </div>
+
+            <div class="project" id="project4">
+                <h2>Time for reflection</h2>
                 <div class="project-year">2023</div>
                 <div class="project-video">
                     <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
                 </div>
                 <div class="project-description">
-                    <p>Din tredje installasjon. Beskriv hvordan publikum interagerer med verket og hvilke reaksjoner du har opplevd.</p>
+                    <p>Beskrivelse av verket.</p>
+                </div>
+            </div>
+
+            <div class="project" id="project5">
+                <h2>We'll see where it goes</h2>
+                <div class="project-year">2023</div>
+                <div class="project-video">
+                    <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                </div>
+                <div class="project-description">
+                    <p>Beskrivelse av verket.</p>
+                </div>
+            </div>
+
+            <div class="project" id="project6">
+                <h2>Prosjektnavn 6</h2>
+                <div class="project-year">2023</div>
+                <div class="project-video">
+                    <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                </div>
+                <div class="project-description">
+                    <p>Beskrivelse av verket.</p>
+                </div>
+            </div>
+
+            <div class="project" id="project7">
+                <h2>Prosjektnavn 7</h2>
+                <div class="project-year">2023</div>
+                <div class="project-video">
+                    <iframe src="https://player.vimeo.com/video/DITT_VIDEO_ID" allowfullscreen></iframe>
+                </div>
+                <div class="project-description">
+                    <p>Beskrivelse av verket.</p>
                 </div>
             </div>
 
@@ -326,7 +405,7 @@
             <div class="contact" id="contact">
                 <h2>Kontakt</h2>
                 <div class="contact-info">
-                    <p><strong>E-post:</strong> <a href="mailto:din@epost.no">alba-lasanta@hotmail.com</a></p>
+                    <p><strong>E-post:</strong> <a href="mailto:alba-lasanta@hotmail.com">alba-lasanta@hotmail.com</a></p>
                     <p><strong>Telefon:</strong> +47 92016511</p>
                     <p><strong>Sted:</strong> Oslo, Norge</p>
                     <p><strong>Instagram:</strong> <a href="https://instagram.com/alba.lasanta" target="_blank">@alba.lasanta</a></p>
@@ -345,6 +424,7 @@
             const homeContent = document.querySelector('.home-content');
             const allProjects = document.querySelectorAll('.project');
             const allSections = document.querySelectorAll('.about, .contact');
+            const homeLink = document.querySelector('.home-link');
 
             // Toggle projects list
             projectsToggle.addEventListener('click', function(e) {
@@ -383,6 +463,22 @@
                     allSections.forEach(section => section.classList.remove('active'));
                     document.getElementById(sectionId).classList.add('active');
                 });
+            });
+
+            // Handle home link click (name)
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide all projects and sections
+                allProjects.forEach(project => project.classList.remove('active'));
+                allSections.forEach(section => section.classList.remove('active'));
+                
+                // Show home content
+                homeContent.classList.remove('hidden');
+                
+                // Close projects menu if open
+                projectsList.classList.remove('open');
+                projectsToggle.classList.remove('open');
             });
         });
     </script>
